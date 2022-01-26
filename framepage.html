@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frame</title>
+  </head>
+  <body>
+    <iframe
+      name="top"
+      src="page1.html"
+      style="height: 100vh; width: 33.3vw; background-color: aqua"
+    ></iframe>
+    <iframe
+      name="main"
+      src="page2.html"
+      style="height: 100vh; width: 33.3vw; background-color: rgb(255, 115, 0)"
+    ></iframe>
+    <iframe
+      name="bottom"
+      src="page3.html"
+      style="
+        height: 50vh;
+        width: 33.3vw;
+        position: absolute;
+        background-color: rgb(223, 27, 27);
+      "
+    ></iframe>
+    <iframe
+      name="bottom"
+      src="page4.html"
+      style="
+        height: 50vh;
+        width: 33.3vw;
+        position: absolute;
+        top: 50vh;
+        background-color: green;
+      "
+    ></iframe>
+  </body>
+</html>
