@@ -1,0 +1,816 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  height: 80px;
+  background-color: rgba(39, 115, 238, 0.99);
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: fixed;
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+
+@-moz-document url-prefix() {
+  .navbar {
+    background-color: rgba(39, 115, 238, 1);
+  }
+}
+
+.navbar_content_list {
+  display: inline-flex;
+  height: 80px;
+  list-style: none;
+  margin-right: 30px;
+  float: right;
+  max-width: calc(100% - 200px);
+}
+
+#siteName {
+  text-decoration: none;
+  font-size: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: 100%;
+  position: relative;
+  width: fit-content;
+  color: white;
+  top: 20px;
+  padding-left: 30px;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.navbar_element {
+  text-decoration: none;
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: 100%;
+  position: relative;
+  width: fit-content;
+  color: white;
+  top: -10px;
+  padding-left: 30px;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+#siteName:hover {
+  color: chartreuse;
+}
+
+.navbar_content_list2 {
+  position: fixed;
+  padding-top: 90px;
+  list-style: none;
+  height: auto;
+  width: 100vw;
+  padding-bottom: 10px;
+  background-color: rgb(99, 98, 98);
+  display: none;
+  z-index: 4;
+  overflow-y: scroll;
+  max-height: 100%;
+}
+
+.navbar_content2 {
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+
+.navbar_element2 {
+  text-decoration: none;
+  padding-left: 20px;
+  font-size: 18px;
+  color: white;
+}
+
+.menu {
+  width: 100%;
+}
+
+#btnMenu {
+  font-size: 38px;
+  color: white;
+  float: right;
+  padding-right: 20px;
+  position: relative;
+  top: -15px;
+}
+
+@media screen and (max-width: 1120px) {
+  .navbar_list {
+    display: none;
+  }
+
+  #btnMenu {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1121px) {
+  #btnMenu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #siteName {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #siteName {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 270px) {
+  #siteName {
+    font-size: 20px;
+  }
+
+  #btnMenu {
+    position: relative;
+    top: -6px;
+  }
+}
+
+@media screen and (max-width: 235px) {
+  #siteName {
+    display: none;
+  }
+
+  #btnMenu {
+    position: relative;
+    top: 20px;
+  }
+}
+
+.body_part {
+  width: calc(100vw - 40px);
+  margin-left: 20px;
+  position: relative;
+  padding-top: 90px;
+}
+
+.img_building {
+  width: 70vw;
+  margin-left: 15vw;
+  border-radius: 20px;
+  border: 2px solid rgba(39, 115, 238, 1);
+}
+
+.flex1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-shrink: 2;
+}
+
+.welcome {
+  max-width: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  width: 700px;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+
+.mission_text {
+  font-size: 30px;
+  padding-left: 20px;
+  color: rgb(100, 100, 100);
+}
+
+.mission_body {
+  margin-left: 10px;
+  padding-left: 10px;
+  color: rgb(99, 98, 98);
+}
+
+.message {
+  padding-top: 40px;
+  max-width: 100%;
+  width: 400px;
+  margin-top: 30px;
+  margin-left: 20px;
+  background-color: rgba(0, 98, 255, 0.8);
+  border-radius: 20px;
+  height: auto;
+}
+
+.message img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 2px solid white;
+}
+
+.principal_title, .chairperson_title, .viceprincipal_title, .principal_name, .chairperson_name, .viceprincipal_name {
+  text-align: center;
+}
+
+.principal_message {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.principal_image {
+  margin-left: calc(50% - 50px);
+}
+
+.principal_title {
+  font-size: 23px;
+  color: white;
+}
+
+.principal_name {
+  font-size: 18px;
+  color: white;
+  padding-top: 5px;
+}
+
+.chairperson_message {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.chairperson_image {
+  margin-left: calc(50% - 50px);
+}
+
+.chairperson_title {
+  font-size: 23px;
+  color: white;
+}
+
+.chairperson_name {
+  font-size: 18px;
+  color: white;
+  padding-top: 5px;
+}
+
+.viceprincipal_message {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.viceprincipal_image {
+  margin-left: calc(50% - 50px);
+}
+
+.viceprincipal_title {
+  font-size: 23px;
+  color: white;
+}
+
+.viceprincipal_name {
+  font-size: 18px;
+  color: white;
+  padding-top: 5px;
+}
+
+.message_text {
+  font-size: 33px;
+  text-align: center;
+  color: white;
+}
+
+.msgBtn {
+  width: 100px;
+  height: 40px;
+  margin-left: calc(50% - 50px);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  color: rgba(39, 115, 238, 1);
+  cursor: pointer;
+}
+
+.msg_from_cp, .msg_from_vp, .msg_from_p {
+  padding-right: 10px;
+  color: whitesmoke;
+  display: none;
+}
+
+.admission {
+  width: 100%;
+  margin-top: 70px;
+  border: 2px solid rgba(70, 70, 71, 1);
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.admission_policy_title {
+  text-align: center;
+  font-size: 26px;
+  padding-bottom: 20px;
+  color: rgba(70, 70, 71, 1)
+}
+
+.admission_policy_content {
+  text-align: left;
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+
+.enroll_btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 98, 255, 1);
+  border: none;
+  margin-left: calc(50% - 60px);
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.enroll_btn:hover {
+  color: rgba(0, 98, 255, 1);
+  background-color: white;
+  border: 2px solid rgba(0, 98, 255, 1);
+}
+
+.enroll_form {
+  margin-left: 10px;
+  width: 100%;
+  max-width: 400px;
+  display: none;
+}
+
+.sdtName {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  max-width: 400px;
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(0, 98, 255, 1);
+}
+
+.sdtAddress {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  max-width: 400px;
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(0, 98, 255, 1);
+}
+
+.sdtNumber {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: calc(100% - 20px);
+  max-width: 400px;
+  height: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgba(0, 98, 255, 1);
+}
+
+.enroll_submit {
+  width: calc(100% - 20px);
+  height: 40px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  background-color: rgba(0, 98, 255, 1);
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#grade-section {
+  width: calc(100% - 20px);
+  position: relative;
+  top: 10px;
+}
+
+#faculty-section {
+  width: calc(100% - 20px);
+  position: relative;
+  top: 33px;
+  right: 91px;
+}
+
+#document-section {
+  width: calc(100% - 20px);
+  position: relative;
+  top: 35px;
+  right: 0px;
+}
+
+.document_input {
+  position: relative;
+  left: 90px;
+  top: -18px;
+}
+
+.enroll_submit {
+  position: relative;
+  top: 25px;
+}
+
+.enroll_submit:hover {
+  color: rgba(0, 98, 255, 1);
+  background-color: white;
+  border: 2px solid rgba(0, 98, 255, 1);
+}
+
+@media screen and (min-width:500px) {
+  .enroll_form {
+    margin-top: 20px;
+    margin-left: calc(50% - 200px);
+  }
+}
+
+.aboutus {
+  width: 100%;
+  margin-top: 70px;
+  border: 2px solid rgba(0, 98, 255, 1);
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.aboutus_text {
+  text-align: center;
+  font-size: 26px;
+  padding-bottom: 20px;
+  color: rgba(70, 70, 71, 1)
+}
+
+.aboutus_content {
+  text-align: left;
+  padding-bottom: 20px;
+  font-size: 15px;
+}
+
+.au_btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 98, 255, 1);
+  border: none;
+  margin-left: calc(50% - 60px);
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.au_btn:hover {
+  color: rgba(0, 98, 255, 1);
+  background-color: white;
+  border: 2px solid rgba(0, 98, 255, 1);
+}
+
+.au_text1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.au_text2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.au_text3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: none;
+}
+
+.staffs {
+  width: 100%;
+  margin-top: 70px;
+  border: 2px solid rgba(70, 70, 71, 1);
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.staff_text {
+  text-align: center;
+  font-size: 26px;
+  padding-bottom: 20px;
+  color: rgba(70, 70, 71, 1)
+}
+
+.principal_image_staff {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 2px solid rgba(0, 98, 255, 1);
+  margin-left: calc(50% - 50px);
+  margin-right: calc(50% - 50px);
+}
+
+.principal_title_staff, .vprincipal_title_staff {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.principal_name_staff, .vprincipal_name_staff {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 18px;
+  color: rgba(70, 70, 71, 1);
+}
+
+.vprincipal_image_staff {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: 2px solid rgba(0, 98, 255, 1);
+  margin-left: calc(50% - 50px);
+  margin-right: calc(50% - 50px);
+}
+
+.staff_table, .staff_table th, .staff_table tr td {
+  border: 1px solid rgba(0, 98, 255, 1);
+  border-collapse: collapse;
+}
+
+.staff_table th {
+  color: rgba(0, 98, 255, 1);
+  background-color: white;
+}
+
+.staff_table tr:nth-child(even) {
+  background-color: rgb(60, 132, 247);
+  color: white;
+}
+
+.staff_table tr:nth-child(odd) {
+  background-color: rgb(12, 103, 248);
+  color: white;
+}
+
+.staff_table th {
+  height: 50px;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.staff_table {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.staff_table td {
+  padding: 10px;
+}
+
+.staff_table {
+  margin-top: 30px;
+  display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .staff_table {
+    margin-left: calc(50% - 200px);
+  }
+}
+
+#showStaff {
+  font-size: 50px;
+  color: rgba(0, 98, 255, 1);
+  margin-left: calc(50% - 25px);
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.news_section {
+  width: 100%;
+  margin-top: 70px;
+  border: 2px solid rgba(0, 98, 255, 1);
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.flex2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-shrink: 4;
+  flex-wrap: wrap;
+}
+
+.news_title {
+  text-align: center;
+  font-size: 26px;
+  padding-bottom: 20px;
+  color: rgba(70, 70, 71, 1);
+}
+
+.news1_container, .news2_container, .news3_container {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 60px;
+  background-color: whitesmoke;
+}
+
+.news1_title, .news2_title, .news3_title {
+  font-size: 20px;
+  font-weight: 900;
+  color: black;
+}
+
+.news1_content1, .news2_content1, .news3_content1 {
+  font-size: 15px;
+  color: rgba(70, 70, 71, 1);
+  padding-left: 10px;
+}
+
+.news1_RMbtn, .news2_RMbtn, .news3_RMbtn {
+  background-color: rgba(0, 98, 255, 1);
+  color: white;
+  border-radius: 20px;
+  height: 40px;
+  width: 100px;
+  border: none;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.news1_RMbtn:hover, .news2_RMbtn:hover, .news3_RMbtn:hover {
+  color: rgba(0, 98, 255, 1);
+  background-color: white;
+  border: 2px solid rgba(0, 98, 255, 1);
+  cursor: pointer;
+}
+
+.news1_main, .news2_main, .news3_main {
+  display: none;
+}
+
+.contact {
+  width: 100%;
+  margin-top: 70px;
+  border: 2px solid rgba(70, 70, 71, 1);
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact_text {
+  text-align: center;
+  font-size: 26px;
+  padding-bottom: 20px;
+  color: rgba(70, 70, 71, 1)
+}
+
+.CI_name {
+  text-align: center;
+  font-size: 19px;
+  color: rgba(0, 98, 255, 1);
+  padding-top: 10px;
+}
+
+.CI_address {
+  text-align: center;
+  font-size: 19px;
+  color: rgba(0, 98, 255, 1);
+  padding-top: 5px;
+}
+
+.CI_phn {
+  text-align: center;
+  font-size: 19px;
+  color: rgba(0, 98, 255, 1);
+  padding-top: 5px;
+}
+
+.CI_phn i {
+
+  color: rgb(240, 17, 61);
+  font-style: normal;
+}
+
+.CI_email {
+  text-align: center;
+  font-size: 19px;
+  color: rgba(0, 98, 255, 1);
+  padding-top: 5px;
+}
+
+.CI_email i {
+  color: rgb(240, 17, 61);
+  font-style: normal;
+}
+
+.CI_site {
+  text-align: center;
+  font-size: 19px;
+  color: rgba(0, 98, 255, 1);
+  padding-top: 5px;
+}
+
+.CI_site i {
+  color: rgb(240, 17, 61);
+  font-style: normal;
+}
+
+#footer {
+  width: 100vw;
+  min-height: 50px;
+  margin-top: 50px;
+  background: rgba(74, 183, 237, 0.5);
+}
+
+#footer-para {
+  text-align: center;
+  color: rgba(15, 15, 10);
+  font-size: 20px;
+  padding-top: 10px;
+}
+#footer-para i{
+  color: rgba(0, 98, 255, 1);
+  font-size: 25px;
+  cursor: pointer;
+}
+@media screen and (max-width: 360px){
+  .CI_container p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 300px){
+  .CI_container p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 250px){
+  .CI_container p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 200px){
+  .CI_container p {
+    font-size: 8px;
+  }
+}
+.chairperson_image, .principal_image, .viceprincipal_image, .principal_image_staff, .vprincipal_image_staff{
+  cursor: pointer;
+}
