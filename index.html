@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="oxford.css">
   <link rel="icon" type="image/png" href="logo.png">
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-
+  
   <title>Oxford Academy</title>
 </head>
 
-<body>
+<body onload = "ourMissionWriter(); messageTitleLoader();">
   <div class="navbar_conatiner" id="navbar-container">
     <nav class="navbar" id="navbar">
       <div class="site_name">
-        <a href="#home" class="navbar_siteName" id="siteName">Oxford Academy</a>
+        <a href="#" class="navbar_siteName" id="siteName" >Oxford Academy</a>
       </div>
       <div class="navbar_list" id="navbar-list">
         <ul class="navbar_content_list" id="navbar-content-list">
@@ -78,8 +78,9 @@
         <div class="flex1" id="flex1">
           <div class="welcome" id="welcome">
             <span id="mission-text" class="mission_text">
-              Our Mission
+        
             </span>
+            
             <br>
             <span id="missions" class="missions">
               <p id="mission-body" class="mission_body">
@@ -97,7 +98,7 @@
           </div>
           <div class="message" id="message">
             <div class="msg_list" id="msg-list">
-              <p class="message_text" id="message-text">Messages</p>
+              <p class="message_text" id="message-text"></p>
               <div class="chairperson_message" id="chairperson-message">
                 <img src="chairperson.png" class="chairperson_image" id="chairperson-image">
                 <p class="chairperson_title">Chairperson</p>
@@ -181,7 +182,6 @@
                 <input type="file" name="documents" id="documents-input" class="document_input" multiple accept="image/png, image/jpg, image/jpeg, image/gif" required>
               </span>
               <input type="submit" value="Enroll Now" id="enroll-Submit" class="enroll_submit">
-
             </form>
 
           </span>
@@ -210,8 +210,6 @@
           </span>
 
         </div>
-
-
         <div class="staffs" id="staff">
           <p class="staff_text" id="staff-text">Staffs</p>
           <span class="staff_content1" id="staff-content1">
@@ -418,6 +416,25 @@
               <b>Website:</b><i> https://www.oxfordacademy.edu.np</i>
             </p>
           </span>
+
+          <div class="CF_container" id="CF-container">
+            <form action="" method="post" class ="contact_form" id ="conatct-form">
+              <p class = "cf_title">Get In Touch</p>
+              <input type="text" name="name" id="user-name" class="user_name" placeholder = "Your name...">
+              <input type="email" name="email" id="user-email" class="user_email" placeholder ="Your Email Address...">
+              <input type="text" id="user-address" class="user_address" name ="address" placeholder="Address">
+              <textarea name="message" id="user-message" class ="user_message" placeholder ="Type your message"></textarea>
+              <input type="submit" value="Send" class="submit_btn" id="submit-btn">
+            </form>
+          </div>
+          <div class ="map_container" id ="map-container">
+            <div class="map_btn" id="map-btn">
+              <input type="button" value="Locate Us" id ="locate-btn" class ="locate_btn">
+            </div>
+            <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d397.32119805864096!2d83.46871795265335!3d27.687631745620365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399686860d9d69c9%3A0xbeba25940f98bc3e!2sOXFORD%20SECONDARY%20SCHOOL!5e0!3m2!1sen!2snp!4v1643382032738!5m2!1sen!2snp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+          </div>
         </div>
       </div>
     </div>
@@ -431,6 +448,9 @@
   </footer>
 
 
+
+
+  <script src="ux.js"></script>
   <script>
     let showBtn = document.getElementById("btnMenu");
     let cMsg = document.getElementById("msgBtn-chairperson");
@@ -458,6 +478,7 @@
     document.getElementById("insta").onclick = fun2;
     document.getElementById("twitter").onclick = fun3;
     document.getElementById("github").onclick = fun4;
+    document.getElementById("locate-btn").onclick = fun5;
     function fun1() {
       window.open("https://www.facebook.com/arpan.bhandari.7524", '_blank');
     }
@@ -484,6 +505,7 @@
         document.getElementById("principal-message").style.display = "none";
         document.getElementById("viceprincipal-message").style.display = "none";
         document.getElementById("msg-from-cp").style.display = "block";
+        document.getElementById("message").scrollIntoView();
         cMsg.value = "Close";
       } else if (cMsg.value == "Close") {
         document.getElementById("principal-message").style.display = "block";
@@ -497,6 +519,7 @@
         document.getElementById("chairperson-message").style.display = "none";
         document.getElementById("viceprincipal-message").style.display = "none";
         document.getElementById("msg-from-p").style.display = "block";
+        document.getElementById("message").scrollIntoView();
         pMsg.value = "Close";
       } else if (pMsg.value == "Close") {
         document.getElementById("chairperson-message").style.display = "block";
@@ -510,6 +533,7 @@
         document.getElementById("chairperson-message").style.display = "none";
         document.getElementById("principal-message").style.display = "none";
         document.getElementById("msg-from-vp").style.display = "block";
+        document.getElementById("message").scrollIntoView();
         vpMsg.value = "Close";
       } else if (vpMsg.value == "Close") {
         document.getElementById("chairperson-message").style.display = "block";
@@ -522,31 +546,37 @@
       if (enroll.value == "Enroll Now") {
         enrollForm.style.display = "block";
         adm.style.paddingBottom = "80px;"
-        enroll.value = "Enroll Later"
+        enroll.value = "Enroll Later";
+        enroll.scrollIntoView();
       } else if (enroll.value == "Enroll Later") {
         enrollForm.style.display = "none";
         adm.style.paddingBottom = "0px;"
         enroll.value = "Enroll Now";
+        document.getElementById("aboutus-text").scrollIntoView();
       }
     }
     function aboutShow() {
       if (auBtn.value == "Read More") {
         document.getElementById("au-text2").style.display = "block";
         document.getElementById("au-text3").style.display = "block";
+        document.getElementById("aboutus-text").scrollIntoView();
         auBtn.value = "Close";
       } else if (auBtn.value == "Close") {
         document.getElementById("au-text2").style.display = "none";
         document.getElementById("au-text3").style.display = "none";
         auBtn.value = "Read More";
+        document.getElementById("staff-text").scrollIntoView();
       }
     }
     function showStaffFunc() {
       if (showStaff.className == "bx bx-chevron-down") {
         document.getElementById("staff-table").style.display = "block";
         showStaff.className = "bx bx-x";
+        showStaff.scrollIntoView();
       } else if (showStaff.className == "bx bx-x") {
         document.getElementById("staff-table").style.display = "none";
         showStaff.className = "bx bx-chevron-down";
+        document.getElementById("news-title").scrollIntoView();
       }
     }
     function read1News() {
@@ -580,6 +610,17 @@
         document.getElementById("news3-content1").style.display = "block";
         document.getElementById("news3-main").style.display = "none";
         news3RMbtn.value = "Read More";
+      }
+    }
+
+    function fun5(){
+      if (document.getElementById("locate-btn").value == "Locate Us"){
+        document.getElementById("locate-btn").value = "Done";
+        document.getElementById("map").style.display = "block";
+      }
+      else{
+        document.getElementById("locate-btn").value = "Locate Us";
+        document.getElementById("map").style.display = "none";
       }
     }
   </script>
